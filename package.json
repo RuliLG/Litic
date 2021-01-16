@@ -1,0 +1,31 @@
+{
+  "name": "techseo",
+  "version": "1.0.0",
+  "description": "Perform technical SEO analysis to your website.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RuliLG/TechSEO.git"
+  },
+  "keywords": [
+    "seo",
+    "technical",
+    "seo",
+    "automated",
+    "testing"
+  ],
+  "author": "Raúl López",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RuliLG/TechSEO/issues"
+  },
+  "homepage": "https://github.com/RuliLG/TechSEO#readme",
+  "dependencies": {
+    "puppeteer": "^5.5.0",
+    "typescript": "^4.1.3"
+  }
+}
