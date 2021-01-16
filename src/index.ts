@@ -7,5 +7,5 @@ if (!process.argv[2]) {
 const techSeo = new TechSEO(process.argv[2])
 techSeo.test()
     .then(async () => {
-        console.log(techSeo.results())
+        console.log(techSeo.getResults())
     })
