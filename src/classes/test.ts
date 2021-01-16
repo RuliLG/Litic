@@ -8,7 +8,7 @@ export abstract class Test {
     private description: string
     private url?: string = null
     protected browser?: HeadlessBrowser = null
-    protected isValid: boolean = false
+    protected isValid?: boolean = null
 
     protected constructor (name: string, description: string, url: string = null) {
         this.name = name

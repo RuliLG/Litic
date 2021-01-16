@@ -5,7 +5,7 @@ import { Importance } from "../enums/importance";
 
 export class HttpsTest extends Test {
     constructor () {
-        super('HTTPS', 'Page is loaded through HTTPS')
+        super('HTTPS', 'Page is loaded through HTTPS', 'https://developers.google.com/search/blog/2015/12/indexing-https-pages-by-default')
     }
 
     getType (): ResultType {
@@ -17,8 +17,6 @@ export class HttpsTest extends Test {
     }
 
     async test (): Promise<Result> {
-        const html = this.browser.raw()
-        console.log(html)
         return {} as Result
     }
 }
