@@ -26,9 +26,9 @@ class TestSuite {
         return this.tests
     }
 
-    results (): Result[] {
+    getResults (): Result[] {
         return this.tests.map(test => {
-            const result = test.result()
+            const result = test.getResult()
             result.category = this.getName()
             return result
         })

@@ -24,11 +24,7 @@ export abstract class Test {
         return this.description
     }
 
-    setBrowser (browser: HeadlessBrowser) {
-        this.browser = browser
-    }
-
-    result (): Result {
+    getResult (): Result {
         return {
             name: this.getName(),
             description: this.getDescription(),
@@ -37,6 +33,10 @@ export abstract class Test {
             passed: this.isValid,
             importance: this.getImportance()
         }
+    }
+
+    setBrowser (browser: HeadlessBrowser) {
+        this.browser = browser
     }
 
     abstract getType (): ResultType

@@ -17,7 +17,7 @@ export class HttpsTest extends Test {
     }
 
     async test (): Promise<Result> {
-        const html = await this.browser.html()
+        const html = this.browser.raw()
         console.log(html)
         return {} as Result
     }

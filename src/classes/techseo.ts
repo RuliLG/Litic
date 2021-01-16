@@ -28,10 +28,10 @@ export class TechSEO {
         }
     }
 
-    results (): Result[] {
+    getResults (): Result[] {
         let results: Result[] = []
         for (const suite of this.tests) {
-            results = [...results, ...suite.results()]
+            results = [...results, ...suite.getResults()]
         }
 
         return results
