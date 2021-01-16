@@ -4,6 +4,7 @@ export class HeadlessBrowser {
     private url: string
     private browser?: puppeteer.Browser = null
     private page?: puppeteer.Page = null
+    private rawHtml?: string = null
 
     constructor (url: string) {
         this.url = url
@@ -12,15 +13,16 @@ export class HeadlessBrowser {
     async open (): Promise<void> {
         this.browser = await puppeteer.launch()
         this.page = await this.browser.newPage()
-        await this.page.goto(this.url)
+        const response = await this.page.goto(this.url)
+        this.rawHtml = await response.text()
     }
 
     async html (): Promise<string> {
         return this.page.content()
     }
 
-    async raw (): Promise<string> {
-        return this.page.text()
+    raw (): string {
+        return this.rawHtml
     }
 
     async close (): Promise<void> {
