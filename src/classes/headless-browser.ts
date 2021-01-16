@@ -5,6 +5,7 @@ export class HeadlessBrowser {
     private browser?: puppeteer.Browser = null
     private page?: puppeteer.Page = null
     private rawHtml?: string = null
+    private consoleErrors: string[] = []
 
     constructor (url: string) {
         this.url = url
@@ -13,6 +14,10 @@ export class HeadlessBrowser {
     async open (): Promise<void> {
         this.browser = await puppeteer.launch()
         this.page = await this.browser.newPage()
+        this.page.on('pageerror', (error) => {
+            this.consoleErrors.push(error.toString())
+        })
+
         const response = await this.page.goto(this.url)
         this.rawHtml = await response.text()
     }
@@ -23,6 +28,10 @@ export class HeadlessBrowser {
 
     getRawHtml (): string {
         return this.rawHtml
+    }
+
+    getConsoleErrors (): string[] {
+        return this.consoleErrors
     }
 
     async close (): Promise<void> {
