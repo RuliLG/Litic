@@ -18,7 +18,7 @@ export class PlainTextEmailsTest extends Test {
     }
 
     async test (): Promise<Result> {
-        const html = await this.browser.html()
+        const html = await this.browser.getHtml()
         const hasEmails = (new EmailValidator()).isValid(html)
         this.isValid = !hasEmails
         return this.getResult()

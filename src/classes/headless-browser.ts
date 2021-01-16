@@ -17,11 +17,11 @@ export class HeadlessBrowser {
         this.rawHtml = await response.text()
     }
 
-    async html (): Promise<string> {
+    async getHtml (): Promise<string> {
         return this.page.content()
     }
 
-    raw (): string {
+    getRawHtml (): string {
         return this.rawHtml
     }
 

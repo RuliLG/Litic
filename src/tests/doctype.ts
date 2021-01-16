@@ -17,7 +17,7 @@ export class DoctypeTest extends Test {
     }
 
     async test (): Promise<Result> {
-        const html = this.browser.raw().toLowerCase().trim()
+        const html = this.browser.getRawHtml().toLowerCase().trim()
         this.isValid = html.startsWith('<!doctype html>')
         return this.getResult()
     }
