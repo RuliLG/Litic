@@ -23,6 +23,7 @@ import { JsMinificationTest } from '../tests/js-minification'
 import { HtmlHasLangTest } from '../tests/html-has-lang'
 import { BertTest } from '../tests/bert'
 import { HeadingStructureTest } from '../tests/heading-structure'
+import { HreflangTest } from '../tests/hreflang'
 
 export class TechSEO {
     private url: string
@@ -106,7 +107,8 @@ export class TechSEO {
                     HasMetaCharsetTest,
                     HasMetaViewportTest,
                     HasTitleTest,
-                    CanonicalTest
+                    CanonicalTest,
+                    HreflangTest
                 ]
             },
             {
