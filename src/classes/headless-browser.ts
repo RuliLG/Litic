@@ -15,7 +15,9 @@ export class HeadlessBrowser {
     }
 
     async open (): Promise<void> {
-        this.browser = await puppeteer.launch()
+        this.browser = await puppeteer.launch({
+            args: ['--no-sandbox', '--disable-setuid-sandbox']
+        })
         this.page = await this.browser.newPage()
         this.page.on('pageerror', (error) => {
             this.consoleErrors.push(error.toString())
