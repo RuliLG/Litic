@@ -26,6 +26,7 @@ import { HeadingStructureTest } from '../tests/heading-structure'
 import { HreflangTest } from '../tests/hreflang'
 import { JumpToMainContentTest } from '../tests/jump-to-main-content'
 import { AppleTouchIconTest } from '../tests/apple-touch-icon'
+import { HasMetadescriptionTest } from '../tests/has-metadescription'
 
 export class TechSEO {
     private url: string
@@ -116,6 +117,7 @@ export class TechSEO {
                     HasMetaCharsetTest,
                     HasMetaViewportTest,
                     HasTitleTest,
+                    HasMetadescriptionTest,
                     CanonicalTest,
                     HreflangTest
                 ]
