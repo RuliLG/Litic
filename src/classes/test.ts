@@ -7,6 +7,7 @@ export abstract class Test {
     private name: string
     private description: string
     private url?: string = null
+    protected comment?: string = null
     protected browser?: HeadlessBrowser = null
     protected isValid?: boolean = null
 
@@ -31,6 +32,7 @@ export abstract class Test {
             type: this.getType(),
             infoUrl: this.url,
             passed: this.isValid,
+            comment: this.comment,
             importance: this.getImportance()
         }
     }
