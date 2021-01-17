@@ -18,8 +18,8 @@ export class JsMinificationTest extends Test {
     }
 
     async test (): Promise<Result> {
-        const lighthouse = LighthouseService.get(this.browser.getUrl())
-        const report = lighthouse.getReport()['unminified-javascript']
+        const lighthouse = LighthouseService.get(this.browser!.getUrl())
+        const report = (lighthouse.getReport() as any)['unminified-javascript']
         this.isValid = report.score === 1
         return this.getResult()
     }

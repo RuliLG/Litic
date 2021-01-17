@@ -18,8 +18,8 @@ export class TimeToInteractiveTest extends Test {
     }
 
     async test (): Promise<Result> {
-        const lighthouse = LighthouseService.get(this.browser.getUrl())
-        const report = lighthouse.getReport()['interactive']
+        const lighthouse = LighthouseService.get(this.browser!.getUrl())
+        const report = (lighthouse.getReport() as any).interactive
         this.isValid = report.numericValue <= 3800
         this.comment = `TTI is ${report.displayValue}`
         return this.getResult()

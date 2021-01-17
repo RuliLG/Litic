@@ -18,8 +18,8 @@ export class HreflangTest extends Test {
     }
 
     async test (): Promise<Result> {
-        const lighthouse = LighthouseService.get(this.browser.getUrl())
-        const report = lighthouse.getReport()['hreflang']
+        const lighthouse = LighthouseService.get(this.browser!.getUrl())
+        const report = (lighthouse.getReport() as any).hreflang
         this.isValid = report.score === 1
         return this.getResult()
     }

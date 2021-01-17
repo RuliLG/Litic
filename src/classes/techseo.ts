@@ -53,8 +53,7 @@ export class TechSEO {
             }
 
             await this.browser.close()
-        } catch (error) {
-            console.error(error)
+        } catch {
             this.hasError = true
             await this.browser.close()
         }

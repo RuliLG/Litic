@@ -18,9 +18,9 @@ export class HtmlHasLangTest extends Test {
     }
 
     async test (): Promise<Result> {
-        const lighthouse = LighthouseService.get(this.browser.getUrl())
-        const langReport = lighthouse.getReport()['html-has-lang']
-        const validLangReport = lighthouse.getReport()['html-lang-valid']
+        const lighthouse = LighthouseService.get(this.browser!.getUrl())
+        const langReport = (lighthouse.getReport() as any)['html-has-lang']
+        const validLangReport = (lighthouse.getReport() as any)['html-lang-valid']
 
         const hasLang = langReport.score === 1
         const isValidLang = validLangReport.score === 1

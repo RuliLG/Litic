@@ -18,8 +18,8 @@ export class HttpsRedirectionTest extends Test {
     }
 
     async test (): Promise<Result> {
-        const lighthouse = LighthouseService.get(this.browser.getUrl())
-        const report = lighthouse.getReport()['redirects-http']
+        const lighthouse = LighthouseService.get(this.browser!.getUrl())
+        const report = (lighthouse.getReport() as any)['redirects-http']
         this.isValid = report.score === 1
         return this.getResult()
     }

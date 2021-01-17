@@ -3,7 +3,7 @@ import { Result } from "../types/result";
 import { ResultType } from "../enums/result-type";
 import { Importance } from "../enums/importance";
 import { WhoisService } from "../services/whois.service";
-const dayjs = require('dayjs')
+import * as dayjs from 'dayjs'
 
 export class WhoisTest extends Test {
     constructor () {
@@ -19,7 +19,7 @@ export class WhoisTest extends Test {
     }
 
     async test (): Promise<Result> {
-        const domain = this.browser.getDomain()
+        const domain = this.browser!.getDomain()
         if (domain === 'localhost' || domain === '127.0.0.1') {
             this.comment = 'Working on localhost'
             return this.getResult()
@@ -43,5 +43,7 @@ export class WhoisTest extends Test {
         } catch (e) {
             this.comment = e.message
         }
+
+        return this.getResult()
     }
 }

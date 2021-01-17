@@ -17,7 +17,7 @@ export class HasTitleTest extends Test {
     }
 
     async test (): Promise<Result> {
-        const $ = await this.browser.getHtmlSoup()
+        const $ = await this.browser!.getHtmlSoup()
         const titleTags = $('head title')
         if (titleTags.length === 1) {
             const title = $(titleTags[0]).text().trim()

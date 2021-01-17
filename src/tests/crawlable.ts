@@ -18,8 +18,8 @@ export class CrawlableTest extends Test {
     }
 
     async test (): Promise<Result> {
-        const lighthouse = LighthouseService.get(this.browser.getUrl())
-        const report = lighthouse.getReport()['is-crawlable']
+        const lighthouse = LighthouseService.get(this.browser!.getUrl())
+        const report = (lighthouse.getReport() as any)['is-crawlable']
         this.isValid = report.score === 1
         return this.getResult()
     }

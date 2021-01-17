@@ -18,8 +18,8 @@ export class HeadingStructureTest extends Test {
     }
 
     async test (): Promise<Result> {
-        const lighthouse = LighthouseService.get(this.browser.getUrl())
-        const report = lighthouse.getReport()['heading-order']
+        const lighthouse = LighthouseService.get(this.browser!.getUrl())
+        const report = (lighthouse.getReport() as any)['heading-order']
         this.isValid = report.score === 1
 
         return this.getResult()

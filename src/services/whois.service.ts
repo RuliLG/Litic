@@ -1,8 +1,8 @@
-const whois = require('whois')
+import * as whois from 'whois'
 
 export class WhoisService {
     private domain: string
-    private response?: { [key: string]: string } = null
+    private response?: { [key: string]: string } = undefined
 
     constructor (domain: string) {
         this.domain = domain
@@ -10,7 +10,7 @@ export class WhoisService {
 
     async fetch (): Promise<void> {
         return new Promise((resolve, reject) => {
-            whois.lookup(this.domain, (err, data) => {
+            whois.lookup(this.domain, (err: any, data: any) => {
                 if (err) {
                     reject(new Error(`Could not check ${this.domain} against WHOIS`))
                 } else if (data) {
@@ -30,6 +30,6 @@ export class WhoisService {
     }
 
     getData (): { [key: string]: string } {
-        return this.response
+        return this.response as { [key: string]: string }
     }
 }

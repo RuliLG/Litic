@@ -3,7 +3,7 @@ import { Result } from "../types/result";
 import { ResultType } from "../enums/result-type";
 import { Importance } from "../enums/importance";
 
-const fetch = require('node-fetch')
+import fetch from 'node-fetch'
 
 export class BertTest extends Test {
     constructor () {
@@ -19,18 +19,18 @@ export class BertTest extends Test {
     }
 
     async test (): Promise<Result> {
-        if (!this.namespace['keyword']) {
+        if (!(this.namespace as any).keyword) {
             this.comment = 'No keyword was provided.'
-            return
+            return this.getResult()
         }
 
-        const content = await this.browser.getHtml()
+        const content = await this.browser!.getHtml()
 
         return new Promise(resolve => {
             fetch('https://bertcalculator.com/api/invoke', {
                 method: 'POST',
                 body: JSON.stringify({
-                    keyword: this.namespace['keyword'],
+                    keyword: (this.namespace as any).keyword,
                     html: content
                 }),
                 headers: {
@@ -38,13 +38,13 @@ export class BertTest extends Test {
                     'Content-Type': 'application/json'
                 }
             })
-                .then(response => response.json())
-                .then(json => {
+                .then((response: any) => response.json())
+                .then((json: any) => {
                     this.isValid = json.bert_score >= 80
                     this.comment = `BERT Score: ${json.bert_score}`
                     resolve(this.getResult())
                 })
-                .catch(error => {
+                .catch(() => {
                     this.comment = 'Could not run BERT Analysis.'
                     resolve(this.getResult())
                 })

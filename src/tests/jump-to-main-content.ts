@@ -18,8 +18,8 @@ export class JumpToMainContentTest extends Test {
     }
 
     async test (): Promise<Result> {
-        const lighthouse = LighthouseService.get(this.browser.getUrl())
-        const report = lighthouse.getReport()['bypass']
+        const lighthouse = LighthouseService.get(this.browser!.getUrl())
+        const report = (lighthouse.getReport() as any).bypass
         this.isValid = report.score === 1
         return this.getResult()
     }

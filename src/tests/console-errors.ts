@@ -17,7 +17,7 @@ export class ConsoleErrorsTest extends Test {
     }
 
     async test (): Promise<Result> {
-        this.isValid = this.browser.getConsoleErrors().length === 0
+        this.isValid = this.browser!.getConsoleErrors().length === 0
         return this.getResult()
     }
 }

@@ -18,8 +18,8 @@ export class CssMinificationTest extends Test {
     }
 
     async test (): Promise<Result> {
-        const lighthouse = LighthouseService.get(this.browser.getUrl())
-        const report = lighthouse.getReport()['unminified-css']
+        const lighthouse = LighthouseService.get(this.browser!.getUrl())
+        const report = (lighthouse.getReport() as any)['unminified-css']
         this.isValid = report.score === 1
         return this.getResult()
     }

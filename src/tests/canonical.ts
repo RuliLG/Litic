@@ -48,7 +48,7 @@ export class CanonicalTest extends Test {
     }
 
     private getCanonicalsFromHeaders (): string[] {
-        const headers = this.browser.getHeaders()
+        const headers = this.browser!.getHeaders()
         if (headers.hasOwnProperty('link')) {
             // Headers are written like this:
             // Link: <https://domain.com/path>; rel="canonical"
@@ -64,12 +64,12 @@ export class CanonicalTest extends Test {
     }
 
     private async getCanonicalsFromHtml (): Promise<string[]> {
-        const $ = await this.browser.getHtmlSoup()
+        const $ = await this.browser!.getHtmlSoup()
         const canonicals: string[] = []
 
         const links = $('link[rel="canonical"]')
-        for (let i = 0; i < links.length; i++) {
-            canonicals.push($(links[i]).attr('href'))
+        for (const link of links) {
+            canonicals.push($(link).attr('href'))
         }
 
         return canonicals

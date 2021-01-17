@@ -18,8 +18,8 @@ export class HttpsTest extends Test {
     }
 
     async test (): Promise<Result> {
-        const lighthouse = LighthouseService.get(this.browser.getUrl())
-        const report = lighthouse.getReport()['is-on-https']
+        const lighthouse = LighthouseService.get(this.browser!.getUrl())
+        const report = (lighthouse.getReport() as any)['is-on-https']
         this.isValid = report.score === 1
         return this.getResult()
     }

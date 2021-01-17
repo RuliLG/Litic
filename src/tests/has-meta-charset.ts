@@ -17,7 +17,7 @@ export class HasMetaCharsetTest extends Test {
     }
 
     async test (): Promise<Result> {
-        const $ = await this.browser.getHtmlSoup()
+        const $ = await this.browser!.getHtmlSoup()
         const metas = $('meta[charset]')
 
         this.isValid = metas.length === 1

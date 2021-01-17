@@ -18,8 +18,8 @@ export class AppleTouchIconTest extends Test {
     }
 
     async test (): Promise<Result> {
-        const lighthouse = LighthouseService.get(this.browser.getUrl())
-        const report = lighthouse.getReport()['apple-touch-icon']
+        const lighthouse = LighthouseService.get(this.browser!.getUrl())
+        const report = (lighthouse.getReport() as any)['apple-touch-icon']
         this.isValid = report.score === 1
         return this.getResult()
     }

@@ -18,8 +18,8 @@ export class Http2Test extends Test {
     }
 
     async test (): Promise<Result> {
-        const lighthouse = LighthouseService.get(this.browser.getUrl())
-        const report = lighthouse.getReport()['uses-http2']
+        const lighthouse = LighthouseService.get(this.browser!.getUrl())
+        const report = (lighthouse.getReport() as any)['uses-http2']
         this.isValid = report.score === 1
         return this.getResult()
     }

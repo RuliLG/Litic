@@ -18,8 +18,8 @@ export class HasMetadescriptionTest extends Test {
     }
 
     async test (): Promise<Result> {
-        const lighthouse = LighthouseService.get(this.browser.getUrl())
-        const report = lighthouse.getReport()['meta-description']
+        const lighthouse = LighthouseService.get(this.browser!.getUrl())
+        const report = (lighthouse.getReport() as any)['meta-description']
         this.isValid = report.score === 1
 
         return this.getResult()

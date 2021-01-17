@@ -1,11 +1,10 @@
-const lighthouse = require('lighthouse')
-const chromeLauncher = require('chrome-launcher')
-const fs = require('fs')
+import * as lighthouse from 'lighthouse'
+import * as chromeLauncher from 'chrome-launcher'
 
 export class LighthouseService {
-    private static shared?: LighthouseService = null
+    private static shared?: LighthouseService = undefined
     private url: string
-    private report?: object = null
+    private report?: object = undefined
 
     private constructor (url: string) {
         this.url = url
@@ -175,6 +174,6 @@ export class LighthouseService {
     }
 
     reset () {
-        this.report = null
+        this.report = undefined
     }
 }

@@ -6,13 +6,13 @@ import { HeadlessBrowser } from './headless-browser'
 export abstract class Test {
     private name: string
     private description: string
-    private url?: string = null
-    protected comment?: string = null
-    protected browser?: HeadlessBrowser = null
-    protected isValid?: boolean = null
-    protected namespace?: object = null
+    private url?: string = undefined
+    protected comment?: string = undefined
+    protected browser?: HeadlessBrowser = undefined
+    protected isValid?: boolean = undefined
+    protected namespace?: object = undefined
 
-    protected constructor (name: string, description: string, url: string = null) {
+    protected constructor (name: string, description: string, url?: string) {
         this.name = name
         this.description = description
         this.url = url
