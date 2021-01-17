@@ -10,6 +10,7 @@ export abstract class Test {
     protected comment?: string = null
     protected browser?: HeadlessBrowser = null
     protected isValid?: boolean = null
+    protected namespace?: object = null
 
     protected constructor (name: string, description: string, url: string = null) {
         this.name = name
@@ -39,6 +40,10 @@ export abstract class Test {
 
     setBrowser (browser: HeadlessBrowser) {
         this.browser = browser
+    }
+
+    setNamespace (namespace: object) {
+        this.namespace = namespace
     }
 
     abstract getType (): ResultType
