@@ -3,17 +3,37 @@ import { HttpsTest } from '../tests/https'
 import { Test } from './test'
 import { Result } from '../types/result'
 import { HeadlessBrowser } from './headless-browser'
+import { DoctypeTest } from '../tests/doctype'
+import { PlainTextEmailsTest } from '../tests/plain-text-emails'
+import { ConsoleErrorsTest } from '../tests/console-errors'
+import { HasTitleTest } from '../tests/has-title'
+import { CanonicalTest } from '../tests/canonical'
+import { HasMetaCharsetTest } from '../tests/has-meta-charset'
+import { HasMetaViewportTest } from '../tests/has-meta-viewport'
+import { WhoisTest } from '../tests/whois'
+import { VitalsLcpTest } from '../tests/vitals-lcp'
 import { LighthouseService } from '../services/lighthouse.service'
+import { HttpsRedirectionTest } from '../tests/https-redirection'
+import { TimeToInteractiveTest } from '../tests/time-to-interactive'
+import { CrawlableTest } from '../tests/crawlable'
+import { FcpTest } from '../tests/fcp'
+import { Http2Test } from '../tests/http2'
+import { CssMinificationTest } from '../tests/css-minification'
+import { JsMinificationTest } from '../tests/js-minification'
+import { HtmlHasLangTest } from '../tests/html-has-lang'
+import { BertTest } from '../tests/bert'
 
 export class TechSEO {
     private url: string
     private browser: HeadlessBrowser
+    private namespace: object
     private tests: TestSuite[] = []
     private hasError: boolean = false
 
-    constructor(url: string) {
+    constructor(url: string, namespace: object) {
         this.url = url
         this.browser = new HeadlessBrowser(url)
+        this.namespace = namespace
         this.setupSuites()
     }
 
@@ -55,9 +75,57 @@ export class TechSEO {
     private setupSuites () {
         const suites = [
             {
+                name: 'Performance',
+                tests: [
+                    Http2Test,
+                    VitalsLcpTest,
+                    FcpTest,
+                    TimeToInteractiveTest,
+                    CssMinificationTest,
+                    JsMinificationTest
+                ]
+            },
+            {
+                name: 'Robots',
+                tests: [
+                    CrawlableTest
+                ]
+            },
+            {
+                name: 'Best Practices',
+                tests: [
+                    DoctypeTest,
+                    ConsoleErrorsTest,
+                    HtmlHasLangTest
+                ]
+            },
+            {
+                name: 'Meta-tags',
+                tests: [
+                    HasMetaCharsetTest,
+                    HasMetaViewportTest,
+                    HasTitleTest,
+                    CanonicalTest
+                ]
+            },
+            {
+                name: 'Content',
+                tests: [
+                    BertTest
+                ]
+            },
+            {
                 name: 'Security',
                 tests: [
-                    HttpsTest
+                    PlainTextEmailsTest,
+                    HttpsTest,
+                    HttpsRedirectionTest
+                ]
+            },
+            {
+                name: 'Other',
+                tests: [
+                    WhoisTest
                 ]
             }
         ]
@@ -66,6 +134,7 @@ export class TechSEO {
             const suite = new TestSuite(rawSuite.name, this.browser)
             for (const rawTest of rawSuite.tests) {
                 const test = new rawTest() as Test
+                test.setNamespace(this.namespace)
                 suite.add(test)
             }
 
