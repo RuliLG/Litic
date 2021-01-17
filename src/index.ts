@@ -1,5 +1,5 @@
-import { TechSEO } from './classes/techseo'
+import { Litic } from './classes/litic'
 
 export {
-    TechSEO
+    Litic
 }

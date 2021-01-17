@@ -1,4 +1,4 @@
-import { TechSEO } from './classes/techseo'
+import { Litic } from './classes/litic'
 import { ArgumentParser } from 'argparse'
 import * as fs from 'fs'
 const pkg = JSON.parse(fs.readFileSync('../package.json').toString())
@@ -11,14 +11,14 @@ parser.add_argument('-k', '--keyword', { help: 'Keyword to run content check aga
 
 const args = parser.parse_args()
 
-const techSeo = new TechSEO(args.url, args)
-techSeo.test()
+const litic = new Litic(args.url, args)
+litic.test()
     .then(async () => {
-        if (techSeo.didFail()) {
+        if (litic.didFail()) {
             // eslint-disable-next-line
             console.error('There was a problem running your tests')
         } else {
             // eslint-disable-next-line
-            console.log(techSeo.getResults())
+            console.log(litic.getResults())
         }
     })

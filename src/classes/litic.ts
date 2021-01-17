@@ -28,7 +28,7 @@ import { JumpToMainContentTest } from '../tests/jump-to-main-content'
 import { AppleTouchIconTest } from '../tests/apple-touch-icon'
 import { HasMetadescriptionTest } from '../tests/has-metadescription'
 
-export class TechSEO {
+export class Litic {
     private url: string
     private browser: HeadlessBrowser
     private namespace: object
