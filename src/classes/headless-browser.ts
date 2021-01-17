@@ -47,6 +47,18 @@ export class HeadlessBrowser {
         return this.consoleErrors
     }
 
+    getDomain (): string {
+        const subdomain = this.getSubdomain()
+        const parts = subdomain.split('.')
+        const isSubdomain = parts.length >= 3
+        return isSubdomain ? parts.slice(1).join('.') : subdomain
+    }
+
+    getSubdomain (): string {
+        const url = new URL(this.url)
+        return url.hostname
+    }
+
     async close (): Promise<void> {
         await this.browser.close()
     }
