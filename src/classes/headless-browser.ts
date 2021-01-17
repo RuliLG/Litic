@@ -1,4 +1,5 @@
 import * as puppeteer from 'puppeteer'
+const cheerio = require('cheerio')
 
 export class HeadlessBrowser {
     private url: string
@@ -24,6 +25,11 @@ export class HeadlessBrowser {
 
     async getHtml (): Promise<string> {
         return this.page.content()
+    }
+
+    async getHtmlSoup (): Promise<any> {
+        const html = await this.getHtml()
+        return cheerio.load(html)
     }
 
     getRawHtml (): string {
