@@ -5,9 +5,10 @@ import { Result } from '../types/result'
 import { HeadlessBrowser } from './headless-browser'
 
 export class TechSEO {
-    url: string
-    browser: HeadlessBrowser
-    tests: TestSuite[] = []
+    private url: string
+    private browser: HeadlessBrowser
+    private tests: TestSuite[] = []
+    private hasError: boolean = false
 
     constructor(url: string) {
         this.url = url
@@ -23,18 +24,28 @@ export class TechSEO {
             }
 
             await this.browser.close()
-        } catch {
+        } catch (error) {
+            console.error(error)
+            this.hasError = true
             await this.browser.close()
         }
     }
 
     getResults (): Result[] {
+        if (this.hasError) {
+            return []
+        }
+
         let results: Result[] = []
         for (const suite of this.tests) {
             results = [...results, ...suite.getResults()]
         }
 
         return results
+    }
+
+    didFail (): boolean {
+        return this.hasError
     }
 
     private setupSuites () {
