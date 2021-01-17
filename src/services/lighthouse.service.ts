@@ -2,7 +2,7 @@ import * as lighthouse from 'lighthouse'
 import * as chromeLauncher from 'chrome-launcher'
 
 export class LighthouseService {
-    private static shared?: LighthouseService = undefined
+    static shared?: LighthouseService = undefined
     private url: string
     private report?: object = undefined
 

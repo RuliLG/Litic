@@ -44,6 +44,7 @@ export class Litic {
 
     async test () {
         try {
+            LighthouseService.shared = undefined
             await this.browser.open()
             const lighthouse = LighthouseService.get(this.browser.getUrl())
             lighthouse.reset()
