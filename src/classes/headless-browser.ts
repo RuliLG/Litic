@@ -1,4 +1,5 @@
 import * as puppeteer from 'puppeteer'
+import { Headers } from '../types/headers'
 const cheerio = require('cheerio')
 
 export class HeadlessBrowser {
@@ -7,6 +8,7 @@ export class HeadlessBrowser {
     private page?: puppeteer.Page = null
     private rawHtml?: string = null
     private consoleErrors: string[] = []
+    private headers: Headers = {}
 
     constructor (url: string) {
         this.url = url
@@ -20,7 +22,8 @@ export class HeadlessBrowser {
         })
 
         const response = await this.page.goto(this.url)
-        this.rawHtml = await response.text()
+        this.headers = response.headers() as Headers
+        this.rawHtml = await response.text() as string
     }
 
     async getHtml (): Promise<string> {
@@ -30,6 +33,10 @@ export class HeadlessBrowser {
     async getHtmlSoup (): Promise<any> {
         const html = await this.getHtml()
         return cheerio.load(html)
+    }
+
+    getHeaders (): Headers {
+        return this.headers
     }
 
     getRawHtml (): string {
