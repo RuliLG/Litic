@@ -47,6 +47,10 @@ export class HeadlessBrowser {
         return this.consoleErrors
     }
 
+    getUrl (): string {
+        return this.url
+    }
+
     getDomain (): string {
         const subdomain = this.getSubdomain()
         const parts = subdomain.split('.')
