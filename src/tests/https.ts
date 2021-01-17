@@ -2,10 +2,11 @@ import { Test } from "../classes/test";
 import { Result } from "../types/result";
 import { ResultType } from "../enums/result-type";
 import { Importance } from "../enums/importance";
+import { LighthouseService } from "../services/lighthouse.service";
 
 export class HttpsTest extends Test {
     constructor () {
-        super('HTTPS', 'Page is loaded through HTTPS', 'https://developers.google.com/search/blog/2015/12/indexing-https-pages-by-default')
+        super('HTTPS', 'Website is loaded through HTTPS and it has no mixed content.', 'https://web.dev/is-on-https/')
     }
 
     getType (): ResultType {
@@ -17,6 +18,9 @@ export class HttpsTest extends Test {
     }
 
     async test (): Promise<Result> {
-        return {} as Result
+        const lighthouse = LighthouseService.get(this.browser.getUrl())
+        const report = lighthouse.getReport()['is-on-https']
+        this.isValid = report.score === 1
+        return this.getResult()
     }
 }
