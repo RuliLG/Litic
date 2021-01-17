@@ -1,11 +1,9 @@
 import { Litic } from './classes/litic'
 import { ArgumentParser } from 'argparse'
 import * as fs from 'fs'
-const pkg = JSON.parse(fs.readFileSync('../package.json').toString())
 
-const parser = new ArgumentParser({ description: pkg.description })
+const parser = new ArgumentParser({ description: 'Perform technical SEO analysis to your website.' })
 
-parser.add_argument('-v', '--version', { action: 'version', version: pkg.version })
 parser.add_argument('-u', '--url', { help: 'URL to run the tests against', required: true })
 parser.add_argument('-k', '--keyword', { help: 'Keyword to run content check against' })
 
