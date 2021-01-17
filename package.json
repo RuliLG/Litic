@@ -2,7 +2,7 @@
   "name": "litic",
   "version": "0.1.0",
   "description": "Perform technical SEO analysis to your website.",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "tsc": "tsc",
