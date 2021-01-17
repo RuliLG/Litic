@@ -3,6 +3,7 @@ import { HttpsTest } from '../tests/https'
 import { Test } from './test'
 import { Result } from '../types/result'
 import { HeadlessBrowser } from './headless-browser'
+import { LighthouseService } from '../services/lighthouse.service'
 
 export class TechSEO {
     private url: string
@@ -19,6 +20,9 @@ export class TechSEO {
     async test () {
         try {
             await this.browser.open()
+            const lighthouse = LighthouseService.get(this.browser.getUrl())
+            lighthouse.reset()
+            await lighthouse.run()
             for (const suite of this.tests) {
                 await suite.test()
             }

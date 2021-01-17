@@ -19,7 +19,6 @@ export class VitalsLcpTest extends Test {
 
     async test (): Promise<Result> {
         const lighthouse = LighthouseService.get(this.browser.getUrl())
-        await lighthouse.run()
         const report = lighthouse.getReport()['largest-contentful-paint']
         this.isValid = report.numericValue <= 2500
         this.comment = `LCP took ${report.displayValue}`
