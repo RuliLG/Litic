@@ -24,6 +24,7 @@ import { HtmlHasLangTest } from '../tests/html-has-lang'
 import { BertTest } from '../tests/bert'
 import { HeadingStructureTest } from '../tests/heading-structure'
 import { HreflangTest } from '../tests/hreflang'
+import { JumpToMainContentTest } from '../tests/jump-to-main-content'
 
 export class TechSEO {
     private url: string
@@ -91,6 +92,12 @@ export class TechSEO {
                 name: 'Robots',
                 tests: [
                     CrawlableTest
+                ]
+            },
+            {
+                name: 'Accessibility',
+                tests: [
+                    JumpToMainContentTest
                 ]
             },
             {
