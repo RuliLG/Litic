@@ -66,6 +66,8 @@ export class HeadlessBrowser {
     }
 
     async close (): Promise<void> {
-        await this.browser!.close()
+        if (this.browser) {
+            await this.browser!.close()
+        }
     }
 }
