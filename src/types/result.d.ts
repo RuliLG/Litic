@@ -8,5 +8,6 @@ export interface Result {
     infoUrl?: string,
     passed?: boolean,
     category?: string,
+    comment?: string,
     importance: Importance
 }

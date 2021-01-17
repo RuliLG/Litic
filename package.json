@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/RuliLG/TechSEO#readme",
   "dependencies": {
+    "cheerio": "^1.0.0-rc.5",
     "puppeteer": "^5.5.0",
     "typescript": "^4.1.3"
   }

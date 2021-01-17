@@ -10,7 +10,7 @@ export class PlainTextEmailsTest extends Test {
     }
 
     getType (): ResultType {
-        return this.isValid ? ResultType.Success : ResultType.Error
+        return this.isValid ? ResultType.Success : ResultType.Warning
     }
 
     getImportance (): Importance {
