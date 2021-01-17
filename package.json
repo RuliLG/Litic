@@ -1,6 +1,6 @@
 {
   "name": "litic",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Perform technical SEO analysis to your website.",
   "main": "lib/index.js",
   "scripts": {

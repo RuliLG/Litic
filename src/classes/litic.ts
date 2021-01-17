@@ -34,6 +34,7 @@ export class Litic {
     private namespace: object
     private tests: TestSuite[] = []
     private hasError: boolean = false
+    private error?: any = undefined
 
     constructor(url: string, namespace: object) {
         this.url = url
@@ -54,15 +55,18 @@ export class Litic {
             }
 
             await this.browser.close()
-        } catch {
+        } catch (e) {
             this.hasError = true
+            this.error = JSON.stringify(e)
             await this.browser.close()
         }
     }
 
-    getResults (): Result[] {
+    getResults (): (Result[] | object) {
         if (this.hasError) {
-            return []
+            return {
+                error: this.error
+            }
         }
 
         let results: Result[] = []
