@@ -25,6 +25,7 @@ import { BertTest } from '../tests/bert'
 import { HeadingStructureTest } from '../tests/heading-structure'
 import { HreflangTest } from '../tests/hreflang'
 import { JumpToMainContentTest } from '../tests/jump-to-main-content'
+import { AppleTouchIconTest } from '../tests/apple-touch-icon'
 
 export class TechSEO {
     private url: string
@@ -105,7 +106,8 @@ export class TechSEO {
                 tests: [
                     DoctypeTest,
                     ConsoleErrorsTest,
-                    HtmlHasLangTest
+                    HtmlHasLangTest,
+                    AppleTouchIconTest
                 ]
             },
             {
