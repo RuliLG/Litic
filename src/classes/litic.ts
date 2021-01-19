@@ -35,6 +35,7 @@ import { ContentWidthTest } from '../tests/content-width'
 import { MatchingHtmlLanguageTest } from '../tests/matching-html-language'
 import { TextReadabilityTest } from '../tests/text-readability'
 import { TextRankKeywordsTest } from '../tests/text-rank-keywords'
+import { RelNoopenerTest } from '../tests/rel-noopener'
 
 export class Litic {
     private url: string
@@ -146,7 +147,8 @@ export class Litic {
                 tests: [
                     PlainTextEmailsTest,
                     HttpsTest,
-                    HttpsRedirectionTest
+                    HttpsRedirectionTest,
+                    RelNoopenerTest
                 ]
             },
             {
