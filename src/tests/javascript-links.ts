@@ -13,7 +13,7 @@ export class JavascriptLinksTest extends Test {
     }
 
     getImportance (): Importance {
-        return Importance.High
+        return Importance.Mid
     }
 
     async test (): Promise<Result> {
