@@ -6,7 +6,7 @@ import { LighthouseService } from "../services/lighthouse.service";
 
 export class AppleTouchIconTest extends Test {
     constructor () {
-        super('Apple Touch Icon', 'Provide an icon in case iPhone or iPad users add your website to their home screen.', 'https://web.dev/apple-touch-icon/')
+        super('Apple Touch Icon', 'Provide an icon in case iPhone or iPad users add your website to their home screen.', 'https://cutt.ly/wjP7EnO')
     }
 
     getType (): ResultType {

@@ -6,7 +6,7 @@ import { LighthouseService } from "../services/lighthouse.service";
 
 export class ContentWidthTest extends Test {
     constructor () {
-        super('Content Width', 'When your page\'s content width is smaller or larger than the viewport width, it may not render correctly on mobile screens.', 'https://web.dev/content-width/')
+        super('Content Width', 'When your page\'s content width is smaller or larger than the viewport width, it may not render correctly on mobile screens.', 'https://cutt.ly/MjP7SPV')
     }
 
     getType (): ResultType {

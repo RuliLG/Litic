@@ -6,7 +6,7 @@ import { LighthouseService } from "../services/lighthouse.service";
 
 export class VitalsLcpTest extends Test {
     constructor () {
-        super('Largest Contentful Paint', 'To provide a good user experience, sites should strive to have Largest Contentful Paint occur within the first 2.5 seconds of the page starting to load.', 'https://web.dev/lcp/')
+        super('Largest Contentful Paint', 'To provide a good user experience, sites should strive to have Largest Contentful Paint occur within the first 2.5 seconds of the page starting to load.', 'https://cutt.ly/ujP5Evi')
     }
 
     getType (): ResultType {

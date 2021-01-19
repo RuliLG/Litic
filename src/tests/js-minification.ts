@@ -6,7 +6,7 @@ import { LighthouseService } from "../services/lighthouse.service";
 
 export class JsMinificationTest extends Test {
     constructor () {
-        super('Minified JS', 'Minifying JavaScript files can reduce payload sizes and script parse time.', 'https://web.dev/unminified-javascript/')
+        super('Minified JS', 'Minifying JavaScript files can reduce payload sizes and script parse time.', 'https://cutt.ly/bjP5haZ')
     }
 
     getType (): ResultType {

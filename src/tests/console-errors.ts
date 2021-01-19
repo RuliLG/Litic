@@ -5,7 +5,7 @@ import { Importance } from "../enums/importance";
 
 export class ConsoleErrorsTest extends Test {
     constructor () {
-        super('Console errors', 'No errors are present in the browser console')
+        super('Console errors', 'No errors are present in the browser console', 'https://cutt.ly/TjP5Osg')
     }
 
     getType (): ResultType {

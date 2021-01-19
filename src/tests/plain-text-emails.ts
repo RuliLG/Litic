@@ -6,7 +6,7 @@ import { EmailValidator } from "../validators/email-validator";
 
 export class PlainTextEmailsTest extends Test {
     constructor () {
-        super('No plain text emails', 'Avoid displaying plain text emails to prevent email address harvesting.', 'https://seositecheckup.com/tools/plaintext-emails-test')
+        super('No plain text emails', 'Avoid displaying plain text emails to prevent email address harvesting.', 'https://cutt.ly/4jP5z4h')
     }
 
     getType (): ResultType {

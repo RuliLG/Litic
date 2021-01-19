@@ -5,7 +5,7 @@ import { Importance } from "../enums/importance";
 
 export class ContentSniffingTest extends Test {
     constructor () {
-        super('Protect against MIME Sniffing', 'Server should return the header `X-Content-Type-Options: "nosniff"`.', 'https://www.denimgroup.com/resources/blog/2019/05/mime-sniffing-in-browsers-and-the-security-implications/')
+        super('Protect against MIME Sniffing', 'Server should return the header `X-Content-Type-Options: "nosniff"`.', 'https://cutt.ly/ZjP7AA9')
     }
 
     getType (): ResultType {

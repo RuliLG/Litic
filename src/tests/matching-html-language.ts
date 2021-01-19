@@ -6,7 +6,7 @@ import * as SD from 'silverdiamond';
 
 export class MatchingHtmlLanguageTest extends Test {
     constructor () {
-        super('Matching HTML Language', 'Incorrect HTML lang will cause you issues in search engines that still support HTML lang (e.g. Bing), and they won\'t  serve the correct localised content in different regions.', 'https://sitebulb.com/hints/international/mismatched-hreflang-and-html-lang-declarations/')
+        super('Matching HTML Language', 'Incorrect HTML lang will cause you issues in search engines that still support HTML lang (e.g. Bing), and they won\'t  serve the correct localised content in different regions.', 'https://cutt.ly/djP5lqP')
     }
 
     getType (): ResultType {

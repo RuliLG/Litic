@@ -6,7 +6,7 @@ import { LighthouseService } from "../services/lighthouse.service";
 
 export class CssMinificationTest extends Test {
     constructor () {
-        super('Minified CSS', 'Minifying CSS files can reduce network payload sizes.', 'https://web.dev/unminified-css/')
+        super('Minified CSS', 'Minifying CSS files can reduce network payload sizes.', 'https://cutt.ly/EjP764O')
     }
 
     getType (): ResultType {

@@ -6,7 +6,7 @@ import { LighthouseService } from "../services/lighthouse.service";
 
 export class LongCacheTtlTest extends Test {
     constructor () {
-        super('Optimized caching strategy', 'Take advantage of an effective HTTP caching strategy to serve static assets.', 'https://learn.techseo.blog/properly-handling-static-assets-caching-with-optimal-times')
+        super('Optimized caching strategy', 'Take advantage of an effective HTTP caching strategy to serve static assets.', 'https://cutt.ly/EjP5jMx')
     }
 
     getType (): ResultType {

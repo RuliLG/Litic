@@ -6,7 +6,7 @@ import * as validator from 'html-validator';
 
 export class W3cTest extends Test {
     constructor () {
-        super('HTML is valid', 'Page HTML must be valid according to W3C standards.', 'https://validator.w3.org/docs/why.html')
+        super('HTML is valid', 'Page HTML must be valid according to W3C standards.', 'https://cutt.ly/ojP5Tgo')
     }
 
     getType (): ResultType {

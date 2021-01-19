@@ -5,7 +5,7 @@ import { Importance } from "../enums/importance";
 
 export class HasMetaViewportTest extends Test {
     constructor () {
-        super('<meta name="viewport"> is correctly used', 'Page <head> must contain <meta name="viewport" content="width=device-width, initial-scale=1"> to enable responsiveness on mobile devices.', 'https://web.dev/viewport/')
+        super('<meta name="viewport"> is correctly used', 'Page <head> must contain <meta name="viewport" content="width=device-width, initial-scale=1"> to enable responsiveness on mobile devices.', 'https://cutt.ly/MjP5yqn')
     }
 
     getType (): ResultType {

@@ -6,7 +6,7 @@ import { LighthouseService } from "../services/lighthouse.service";
 
 export class VitalsClsTest extends Test {
     constructor () {
-        super('Cumulative Layout Shift', 'Avoid sudden layout shifts to improve user-experience. Less than 0.1 is considered valid.', 'https://web.dev/optimize-cls/')
+        super('Cumulative Layout Shift', 'Avoid sudden layout shifts to improve user-experience. Less than 0.1 is considered valid.', 'https://cutt.ly/gjP5WlB')
     }
 
     getType (): ResultType {

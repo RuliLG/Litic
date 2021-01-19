@@ -7,7 +7,7 @@ import fetch from 'node-fetch'
 
 export class BertTest extends Test {
     constructor () {
-        super('BERT Score', 'Defines how well your content answers a certain search intent. It provides a value between 0 and 100, being 100 a super-well optimized content.', 'https://bertcalculator.com/')
+        super('BERT Score', 'Defines how well your content answers a certain search intent. It provides a value between 0 and 100, being 100 a super-well optimized content.', 'https://cutt.ly/0jP7Tb3')
     }
 
     getType (): ResultType {

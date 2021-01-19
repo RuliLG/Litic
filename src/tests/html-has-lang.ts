@@ -6,7 +6,7 @@ import { LighthouseService } from "../services/lighthouse.service";
 
 export class HtmlHasLangTest extends Test {
     constructor () {
-        super('<html> has [lang] attribute', 'If a page doesn\'t specify a lang attribute, a screen reader assumes that the page is in the default language that the user chose when setting up the screen reader.', 'https://web.dev/html-lang-valid/')
+        super('<html> has [lang] attribute', 'If a page doesn\'t specify a lang attribute, a screen reader assumes that the page is in the default language that the user chose when setting up the screen reader.', 'https://cutt.ly/njP5p71')
     }
 
     getType (): ResultType {

@@ -6,7 +6,7 @@ import { LighthouseService } from "../services/lighthouse.service";
 
 export class HttpsTest extends Test {
     constructor () {
-        super('HTTPS', 'Website is loaded through HTTPS and it has no mixed content.', 'https://web.dev/is-on-https/')
+        super('HTTPS', 'Website is loaded through HTTPS and it has no mixed content.', 'https://cutt.ly/RjP5gpd')
     }
 
     getType (): ResultType {

@@ -6,7 +6,7 @@ import { LighthouseService } from "../services/lighthouse.service";
 
 export class TextCompressionTest extends Test {
     constructor () {
-        super('Uses Text Compression', 'Text-based resources should be served with compression to minimize total network bytes.', 'https://web.dev/uses-text-compression/')
+        super('Uses Text Compression', 'Text-based resources should be served with compression to minimize total network bytes.', 'https://cutt.ly/MjP5vX6')
     }
 
     getType (): ResultType {

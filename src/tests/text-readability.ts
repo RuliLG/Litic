@@ -6,7 +6,7 @@ import * as SD from 'silverdiamond';
 
 export class TextReadabilityTest extends Test {
     constructor () {
-        super('Text Readability', 'Checks how readable the text of your website is.', 'https://en.wikipedia.org/wiki/Flesch%E2%80%93Kincaid_readability_tests')
+        super('Text Readability', 'Checks how readable the text of your website is.', 'https://cutt.ly/1jP5n6r')
     }
 
     getType (): ResultType {

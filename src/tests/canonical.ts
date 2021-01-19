@@ -5,7 +5,7 @@ import { Importance } from "../enums/importance";
 
 export class CanonicalTest extends Test {
     constructor () {
-        super('Canonical URL is defined', 'The page must have 1 canonical URL defined. The canonical version must point to itself, without query parameters.', 'https://developers.google.com/search/docs/advanced/crawling/consolidate-duplicate-urls?hl=en')
+        super('Canonical URL is defined', 'The page must have 1 canonical URL defined. The canonical version must point to itself, without query parameters.', 'https://cutt.ly/yjP7UyS')
     }
 
     getType (): ResultType {

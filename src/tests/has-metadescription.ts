@@ -6,7 +6,7 @@ import { LighthouseService } from "../services/lighthouse.service";
 
 export class HasMetadescriptionTest extends Test {
     constructor () {
-        super('meta[name="description"]', 'Provide a summary of the page content so that search engines can include it in search results.', 'https://web.dev/meta-description/')
+        super('meta[name="description"]', 'Provide a summary of the page content so that search engines can include it in search results.', 'https://cutt.ly/9jP5y3F')
     }
 
     getType (): ResultType {

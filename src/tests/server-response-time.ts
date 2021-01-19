@@ -6,7 +6,7 @@ import { LighthouseService } from "../services/lighthouse.service";
 
 export class ServerResponseTimeTest extends Test {
     constructor () {
-        super('Server Response Time', 'Developers should aim to a ~100ms server response.', 'https://web.dev/time-to-first-byte/')
+        super('Server Response Time', 'Developers should aim to a ~100ms server response.', 'https://cutt.ly/ojP5cGB')
     }
 
     getType (): ResultType {

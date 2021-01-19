@@ -6,7 +6,7 @@ import { LighthouseService } from "../services/lighthouse.service";
 
 export class TimeToInteractiveTest extends Test {
     constructor () {
-        super('Time to Interactive', 'TTI measures how long it takes a page to become fully interactive.', 'https://web.dev/interactive/')
+        super('Time to Interactive', 'TTI measures how long it takes a page to become fully interactive.', 'https://cutt.ly/wjP5Qm6')
     }
 
     getType (): ResultType {

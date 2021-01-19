@@ -6,7 +6,7 @@ import { LighthouseService } from "../services/lighthouse.service";
 
 export class JumpToMainContentTest extends Test {
     constructor () {
-        super('Jump to Main Content', 'Page must provide a way to skip content that is repeated on pages across your site.', 'https://web.dev/bypass/')
+        super('Jump to Main Content', 'Page must provide a way to skip content that is repeated on pages across your site.', 'https://cutt.ly/IjP5jqA')
     }
 
     getType (): ResultType {

@@ -6,7 +6,7 @@ import { LighthouseService } from "../services/lighthouse.service";
 
 export class HeadingStructureTest extends Test {
     constructor () {
-        super('Heading structure', 'Page heading elements should follow a logical, numerical order that reflects the structure of your content.', 'https://web.dev/heading-order/')
+        super('Heading structure', 'Page heading elements should follow a logical, numerical order that reflects the structure of your content.', 'https://cutt.ly/fjP5i6k')
     }
 
     getType (): ResultType {

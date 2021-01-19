@@ -6,7 +6,7 @@ import { LighthouseService } from "../services/lighthouse.service";
 
 export class ColorContrastTest extends Test {
     constructor () {
-        super('Color Contrast', 'Low-contrast text is difficult or impossible for many users to read.', 'https://web.dev/color-contrast/')
+        super('Color Contrast', 'Low-contrast text is difficult or impossible for many users to read.', 'https://cutt.ly/ejP7OUc')
     }
 
     getType (): ResultType {

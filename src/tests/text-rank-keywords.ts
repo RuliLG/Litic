@@ -6,7 +6,7 @@ import * as SD from 'silverdiamond';
 
 export class TextRankKeywordsTest extends Test {
     constructor () {
-        super('Keywords (Text Rank)', 'Keywords found on your site according to the Text Rank algorithm.', 'https://towardsdatascience.com/textrank-for-keyword-extraction-by-python-c0bae21bcec0')
+        super('Keywords (Text Rank)', 'Keywords found on your site according to the Text Rank algorithm.', 'https://cutt.ly/MjP5nu7')
     }
 
     getType (): ResultType {

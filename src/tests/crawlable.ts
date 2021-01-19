@@ -6,7 +6,7 @@ import { LighthouseService } from "../services/lighthouse.service";
 
 export class CrawlableTest extends Test {
     constructor () {
-        super('Page is crawlable', 'Page is visible to web crawlers.', 'https://web.dev/is-crawable/')
+        super('Page is crawlable', 'Page is visible to web crawlers.', 'https://cutt.ly/WjP7DZI')
     }
 
     getType (): ResultType {

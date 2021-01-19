@@ -6,7 +6,7 @@ import { LighthouseService } from "../services/lighthouse.service";
 
 export class FcpTest extends Test {
     constructor () {
-        super('First Contentful Paint', 'To provide a good user experience, sites should strive to have First Contentful Paint occur within 1 second of the page starting to load.', 'https://web.dev/fcp/')
+        super('First Contentful Paint', 'To provide a good user experience, sites should strive to have First Contentful Paint occur within 1 second of the page starting to load.', 'https://cutt.ly/GjP5eU5')
     }
 
     getType (): ResultType {

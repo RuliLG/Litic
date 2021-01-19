@@ -6,7 +6,7 @@ import { LighthouseService } from "../services/lighthouse.service";
 
 export class RelNoopenerTest extends Test {
     constructor () {
-        super('External links use [rel="noopener"] or [rel="noreferrer"]', 'When you link to a page on another site using the target="_blank" attribute, you can expose your site to performance and security issues.', 'https://web.dev/external-anchors-use-rel-noopener/')
+        super('External links use [rel="noopener"] or [rel="noreferrer"]', 'When you link to a page on another site using the target="_blank" attribute, you can expose your site to performance and security issues.', 'https://cutt.ly/tjP5xX5')
     }
 
     getType (): ResultType {

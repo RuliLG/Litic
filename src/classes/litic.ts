@@ -41,6 +41,7 @@ import { ContentSniffingTest } from '../tests/content-sniffing'
 import { ClickjackingTest } from '../tests/clickjacking'
 import { W3cTest } from '../tests/w3c'
 import { HtmlMinificationTest } from '../tests/html-minification'
+import { JavascriptLinksTest } from '../tests/javascript-links'
 
 export class Litic {
     private url: string
@@ -95,7 +96,8 @@ export class Litic {
                 Result: result.passed === true ? '✅' : (result.passed === false ? '❌' : '⬛️'),
                 Type: result.type,
                 Importance: result.importance,
-                Comment: result.comment
+                Comment: result.comment,
+                URL: result.infoUrl
             }
         }) as any[]
         // eslint-disable-next-line
@@ -131,7 +133,8 @@ export class Litic {
                 tests: [
                     JumpToMainContentTest,
                     MatchingHtmlLanguageTest,
-                    ColorContrastTest
+                    ColorContrastTest,
+                    JavascriptLinksTest
                 ]
             },
             {

@@ -6,7 +6,7 @@ import { LighthouseService } from "../services/lighthouse.service";
 
 export class Http2Test extends Test {
     constructor () {
-        super('HTTP/2', 'HTTP/2 serves your page\'s resources faster and with less data moving over the wire.', 'https://developers.google.com/web/fundamentals/performance/http2/')
+        super('HTTP/2', 'HTTP/2 serves your page\'s resources faster and with less data moving over the wire.', 'https://cutt.ly/3jP5sO2')
     }
 
     getType (): ResultType {

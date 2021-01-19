@@ -5,7 +5,7 @@ import { Importance } from "../enums/importance";
 
 export class HasMetaCharsetTest extends Test {
     constructor () {
-        super('<meta charset="utf-8"> is used', 'This meta should be defined as the first tag inside <head> to ensure all the document is read using UTF-8.', 'https://www.w3schools.com/tags/att_meta_charset.asp')
+        super('<meta charset="utf-8"> is used', 'This meta should be defined as the first tag inside <head> to ensure all the document is read using UTF-8.', 'https://cutt.ly/QjP5rJx')
     }
 
     getType (): ResultType {

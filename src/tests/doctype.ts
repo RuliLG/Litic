@@ -5,7 +5,7 @@ import { Importance } from "../enums/importance";
 
 export class DoctypeTest extends Test {
     constructor () {
-        super('<!DOCTYPE html>', 'Server response starts with the HTML Doctype definition', 'https://www.w3schools.com/tags/tag_doctype.asp')
+        super('<!DOCTYPE html>', 'Server response starts with the HTML Doctype definition', 'https://cutt.ly/MjP5wtz')
     }
 
     getType (): ResultType {

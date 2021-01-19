@@ -5,7 +5,7 @@ import { Importance } from "../enums/importance";
 
 export class HasTitleTest extends Test {
     constructor () {
-        super('<title> tag is present', 'HTML contains a non-empty <title> tag inside <head>', 'https://developers.google.com/search/docs/advanced/appearance/good-titles-snippets')
+        super('<title> tag is present', 'HTML contains a non-empty <title> tag inside <head>', 'https://cutt.ly/ejP5uC1')
     }
 
     getType (): ResultType {

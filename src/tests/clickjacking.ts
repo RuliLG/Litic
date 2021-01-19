@@ -5,7 +5,7 @@ import { Importance } from "../enums/importance";
 
 export class ClickjackingTest extends Test {
     constructor () {
-        super('Protect against Clickjacking', 'Server should return the header `Content-Security-Policy` (preferred) or `X-Frame-Options`.', 'https://cheatsheetseries.owasp.org/cheatsheets/Clickjacking_Defense_Cheat_Sheet.html')
+        super('Protect against Clickjacking', 'Server should return the header `Content-Security-Policy` (preferred) or `X-Frame-Options`.', 'https://cutt.ly/LjP7IPO')
     }
 
     getType (): ResultType {

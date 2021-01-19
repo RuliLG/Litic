@@ -7,7 +7,7 @@ import * as HtmlMinifier from 'html-minifier';
 
 export class HtmlMinificationTest extends Test {
     constructor () {
-        super('HTML Minification', 'HTML is being minified on the server side.', 'https://developers.google.com/speed/docs/insights/MinifyResources')
+        super('HTML Minification', 'HTML is being minified on the server side.', 'https://cutt.ly/8jP5aVO')
     }
 
     getType (): ResultType {

@@ -6,7 +6,7 @@ import { LighthouseService } from "../services/lighthouse.service";
 
 export class HttpsRedirectionTest extends Test {
     constructor () {
-        super('HTTPS Redirection', 'Make sure that you redirect all HTTP traffic to HTTPS in order to enable secure web features for all your users.', 'https://learn.techseo.blog/redirecting-from-http-to-https')
+        super('HTTPS Redirection', 'Make sure that you redirect all HTTP traffic to HTTPS in order to enable secure web features for all your users.', 'https://cutt.ly/GjP5d4q')
     }
 
     getType (): ResultType {
