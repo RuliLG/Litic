@@ -7,7 +7,7 @@ import * as dayjs from 'dayjs'
 
 export class WhoisTest extends Test {
     constructor () {
-        super('WHOIS', 'Information about your domain.')
+        super('Domain expiration', 'There are at least 3 months left to the expiry date.')
     }
 
     getType (): ResultType {
@@ -39,6 +39,7 @@ export class WhoisTest extends Test {
                 this.comment = 'Domain will expire in less than 3 months'
             } else {
                 this.isValid = true
+                this.comment = `Domain will expire at ${expirationDate.format('DD/MM/YYYY')}`
             }
         } catch (e) {
             this.comment = e.message
