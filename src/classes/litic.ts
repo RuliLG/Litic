@@ -30,6 +30,7 @@ import { AppleTouchIconTest } from '../tests/apple-touch-icon'
 import { HasMetadescriptionTest } from '../tests/has-metadescription'
 import { ServerResponseTimeTest } from '../tests/server-response-time'
 import { ContentWidthTest } from '../tests/content-width'
+import { MatchingHtmlLanguageTest } from '../tests/matching-html-language'
 
 export class Litic {
     private url: string
@@ -100,7 +101,8 @@ export class Litic {
             {
                 name: 'Accessibility',
                 tests: [
-                    JumpToMainContentTest
+                    JumpToMainContentTest,
+                    MatchingHtmlLanguageTest
                 ]
             },
             {
