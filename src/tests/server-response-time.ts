@@ -20,7 +20,7 @@ export class ServerResponseTimeTest extends Test {
     async test (): Promise<Result> {
         const lighthouse = LighthouseService.get(this.browser!.getUrl())
         const report = (lighthouse.getReport() as any)['server-response-time']
-        this.isValid = report.numericValue <= 100
+        this.isValid = report.numericValue <= 150
         this.comment = `Server Response Time: ${parseInt(report.numericValue)}ms`
         return this.getResult()
     }
