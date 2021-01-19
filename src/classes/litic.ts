@@ -42,6 +42,7 @@ import { ClickjackingTest } from '../tests/clickjacking'
 import { W3cTest } from '../tests/w3c'
 import { HtmlMinificationTest } from '../tests/html-minification'
 import { JavascriptLinksTest } from '../tests/javascript-links'
+import { EmptyAnchorLinksTest } from '../tests/empty-anchor-links'
 
 export class Litic {
     private url: string
@@ -134,17 +135,18 @@ export class Litic {
                     JumpToMainContentTest,
                     MatchingHtmlLanguageTest,
                     ColorContrastTest,
-                    JavascriptLinksTest
                 ]
             },
             {
                 name: 'Best Practices',
                 tests: [
-                    DoctypeTest,
+                    W3cTest,
                     ConsoleErrorsTest,
+                    DoctypeTest,
                     HtmlHasLangTest,
                     AppleTouchIconTest,
-                    W3cTest,
+                    JavascriptLinksTest,
+                    EmptyAnchorLinksTest,
                 ]
             },
             {
