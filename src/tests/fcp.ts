@@ -21,7 +21,7 @@ export class FcpTest extends Test {
         const lighthouse = LighthouseService.get(this.browser!.getUrl())
         const report = (lighthouse.getReport() as any)['first-contentful-paint']
         this.isValid = report.numericValue <= 1000
-        this.comment = `FCP took ${report.displayValue}`
+        this.comment = `FCP took ${report.displayValue}. Max = 1.0 s`
         return this.getResult()
     }
 }

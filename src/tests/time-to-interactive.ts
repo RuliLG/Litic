@@ -21,7 +21,7 @@ export class TimeToInteractiveTest extends Test {
         const lighthouse = LighthouseService.get(this.browser!.getUrl())
         const report = (lighthouse.getReport() as any).interactive
         this.isValid = report.numericValue <= 3800
-        this.comment = `TTI is ${report.displayValue}`
+        this.comment = `TTI is ${report.displayValue}. Max = 3.8 s`
         return this.getResult()
     }
 }

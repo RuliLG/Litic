@@ -21,7 +21,7 @@ export class VitalsClsTest extends Test {
         const lighthouse = LighthouseService.get(this.browser!.getUrl())
         const report = (lighthouse.getReport() as any)['cumulative-layout-shift']
         this.isValid = report.numericValue <= 0.1
-        this.comment = `CLS took ${report.displayValue}`
+        this.comment = `CLS was ${report.displayValue}. Max = 0.1`
         return this.getResult()
     }
 }

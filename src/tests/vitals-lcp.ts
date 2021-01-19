@@ -21,7 +21,7 @@ export class VitalsLcpTest extends Test {
         const lighthouse = LighthouseService.get(this.browser!.getUrl())
         const report = (lighthouse.getReport() as any)['largest-contentful-paint']
         this.isValid = report.numericValue <= 2500
-        this.comment = `LCP took ${report.displayValue}`
+        this.comment = `LCP took ${report.displayValue}. Max = 2.5 s`
         return this.getResult()
     }
 }
