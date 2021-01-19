@@ -46,6 +46,7 @@ import { HtmlMinificationTest } from '../tests/html-minification'
 import { JavascriptLinksTest } from '../tests/javascript-links'
 import { EmptyAnchorLinksTest } from '../tests/empty-anchor-links'
 import { OffscreenImagesTest } from '../tests/offscreen-images'
+import { TapTargetsTest } from '../tests/tap-targets'
 
 export class Litic {
     private url: string
@@ -140,7 +141,8 @@ export class Litic {
                     JumpToMainContentTest,
                     MatchingHtmlLanguageTest,
                     ColorContrastTest,
-                    ImageAltTest
+                    ImageAltTest,
+                    TapTargetsTest,
                 ]
             },
             {
