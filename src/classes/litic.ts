@@ -39,6 +39,7 @@ import { RelNoopenerTest } from '../tests/rel-noopener'
 import { TextCompressionTest } from '../tests/text-compression'
 import { ContentSniffingTest } from '../tests/content-sniffing'
 import { ClickjackingTest } from '../tests/clickjacking'
+import { W3cTest } from '../tests/w3c'
 
 export class Litic {
     private url: string
@@ -137,7 +138,8 @@ export class Litic {
                     DoctypeTest,
                     ConsoleErrorsTest,
                     HtmlHasLangTest,
-                    AppleTouchIconTest
+                    AppleTouchIconTest,
+                    W3cTest,
                 ]
             },
             {

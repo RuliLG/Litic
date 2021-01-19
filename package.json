@@ -33,6 +33,7 @@
     "argparse": "^2.0.1",
     "cheerio": "^1.0.0-rc.5",
     "dayjs": "^1.10.3",
+    "html-validator": "^5.1.17",
     "lighthouse": "^7.0.0",
     "node-fetch": "^2.6.1",
     "puppeteer": "^5.5.0",
