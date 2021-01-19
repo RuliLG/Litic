@@ -88,7 +88,7 @@ export class Litic {
             return {
                 Category: result.category,
                 Name: result.name,
-                Result: result.passed === true ? '✅' : (result.passed === false ? '❌' : '-'),
+                Result: result.passed === true ? '✅' : (result.passed === false ? '❌' : '⬛️'),
                 Type: result.type,
                 Importance: result.importance,
                 Comment: result.comment
