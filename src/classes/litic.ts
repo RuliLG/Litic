@@ -166,6 +166,8 @@ export class Litic {
                     HttpsTest,
                     HttpsRedirectionTest,
                     RelNoopenerTest
+                    RelNoopenerTest,
+                    ContentSniffingTest,
                 ]
             },
             {
