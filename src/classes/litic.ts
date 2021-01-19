@@ -47,6 +47,7 @@ import { JavascriptLinksTest } from '../tests/javascript-links'
 import { EmptyAnchorLinksTest } from '../tests/empty-anchor-links'
 import { OffscreenImagesTest } from '../tests/offscreen-images'
 import { TapTargetsTest } from '../tests/tap-targets'
+import { FontSizeTest } from '../tests/font-size'
 
 export class Litic {
     private url: string
@@ -143,6 +144,7 @@ export class Litic {
                     ColorContrastTest,
                     ImageAltTest,
                     TapTargetsTest,
+                    FontSizeTest
                 ]
             },
             {
