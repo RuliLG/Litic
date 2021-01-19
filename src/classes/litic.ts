@@ -27,6 +27,7 @@ import { HreflangTest } from '../tests/hreflang'
 import { JumpToMainContentTest } from '../tests/jump-to-main-content'
 import { AppleTouchIconTest } from '../tests/apple-touch-icon'
 import { HasMetadescriptionTest } from '../tests/has-metadescription'
+import { ServerResponseTimeTest } from '../tests/server-response-time'
 
 export class Litic {
     private url: string
@@ -79,6 +80,7 @@ export class Litic {
                 name: 'Performance',
                 tests: [
                     Http2Test,
+                    ServerResponseTimeTest,
                     VitalsLcpTest,
                     FcpTest,
                     TimeToInteractiveTest,
