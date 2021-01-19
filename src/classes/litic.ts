@@ -27,6 +27,7 @@ import { HtmlHasLangTest } from '../tests/html-has-lang'
 import { BertTest } from '../tests/bert'
 import { HeadingStructureTest } from '../tests/heading-structure'
 import { ColorContrastTest } from '../tests/color-contrast'
+import { ImageAltTest } from '../tests/image-alt'
 import { HreflangTest } from '../tests/hreflang'
 import { JumpToMainContentTest } from '../tests/jump-to-main-content'
 import { AppleTouchIconTest } from '../tests/apple-touch-icon'
@@ -137,6 +138,7 @@ export class Litic {
                     JumpToMainContentTest,
                     MatchingHtmlLanguageTest,
                     ColorContrastTest,
+                    ImageAltTest
                 ]
             },
             {
