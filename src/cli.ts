@@ -6,6 +6,7 @@ const parser = new ArgumentParser({ description: 'Perform technical SEO analysis
 
 parser.add_argument('-u', '--url', { help: 'URL to run the tests against', required: true })
 parser.add_argument('-k', '--keyword', { help: 'Keyword to run content check against' })
+parser.add_argument('-o', '--output', { help: 'Output path for a CSV file' })
 
 const args = parser.parse_args()
 
@@ -17,5 +18,9 @@ litic.test()
             console.error('There was a problem running your tests')
         } else {
             litic.log()
+
+            if (args.output) {
+                litic.saveTo(args.output)
+            }
         }
     })

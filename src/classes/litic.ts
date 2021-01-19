@@ -48,6 +48,7 @@ import { EmptyAnchorLinksTest } from '../tests/empty-anchor-links'
 import { OffscreenImagesTest } from '../tests/offscreen-images'
 import { TapTargetsTest } from '../tests/tap-targets'
 import { FontSizeTest } from '../tests/font-size'
+import * as CSV from 'csv-writer';
 
 export class Litic {
     private url: string
@@ -108,6 +109,38 @@ export class Litic {
         }) as any[]
         // eslint-disable-next-line
         console.table(results)
+    }
+
+    async saveTo (path: string): Promise<string> {
+        const finalPath = path.toLowerCase().endsWith('.csv') ? path : path + '.csv'
+        const results = this.getResults().map((result: Result) => {
+            return {
+                Category: result.category,
+                Name: result.name,
+                Description: result.description,
+                Result: result.passed === true ? '✅' : (result.passed === false ? '❌' : '⬛️'),
+                Type: result.type,
+                Importance: result.importance,
+                Comment: result.comment,
+                URL: result.infoUrl
+            }
+        }) as any[]
+
+        const header = Object.keys(results[0]).map((key: string) => {
+            return {
+                id: key,
+                title: key
+            }
+        })
+
+        const csvWriter = CSV.createObjectCsvWriter({
+            path: finalPath,
+            fieldDelimiter: ';',
+            header
+        })
+
+        await csvWriter.writeRecords(results)
+        return finalPath
     }
 
     private setupSuites () {
