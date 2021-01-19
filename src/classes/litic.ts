@@ -36,6 +36,7 @@ import { MatchingHtmlLanguageTest } from '../tests/matching-html-language'
 import { TextReadabilityTest } from '../tests/text-readability'
 import { TextRankKeywordsTest } from '../tests/text-rank-keywords'
 import { RelNoopenerTest } from '../tests/rel-noopener'
+import { TextCompressionTest } from '../tests/text-compression'
 
 export class Litic {
     private url: string
@@ -96,6 +97,7 @@ export class Litic {
                     CssMinificationTest,
                     JsMinificationTest,
                     LongCacheTtlTest,
+                    TextCompressionTest,
                 ]
             },
             {
