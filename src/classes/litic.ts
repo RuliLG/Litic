@@ -45,6 +45,7 @@ import { W3cTest } from '../tests/w3c'
 import { HtmlMinificationTest } from '../tests/html-minification'
 import { JavascriptLinksTest } from '../tests/javascript-links'
 import { EmptyAnchorLinksTest } from '../tests/empty-anchor-links'
+import { OffscreenImagesTest } from '../tests/offscreen-images'
 
 export class Litic {
     private url: string
@@ -124,6 +125,7 @@ export class Litic {
                     LongCacheTtlTest,
                     TextCompressionTest,
                     DomSizeTest,
+                    OffscreenImagesTest
                 ]
             },
             {
