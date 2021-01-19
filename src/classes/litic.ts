@@ -11,6 +11,7 @@ import { CanonicalTest } from '../tests/canonical'
 import { HasMetaCharsetTest } from '../tests/has-meta-charset'
 import { HasMetaViewportTest } from '../tests/has-meta-viewport'
 import { WhoisTest } from '../tests/whois'
+import { DomSizeTest } from '../tests/dom-size'
 import { VitalsLcpTest } from '../tests/vitals-lcp'
 import { VitalsClsTest } from '../tests/vitals-cls'
 import { LongCacheTtlTest } from '../tests/long-cache-ttl'
@@ -121,6 +122,7 @@ export class Litic {
                     JsMinificationTest,
                     LongCacheTtlTest,
                     TextCompressionTest,
+                    DomSizeTest,
                 ]
             },
             {
