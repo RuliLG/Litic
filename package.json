@@ -36,6 +36,7 @@
     "lighthouse": "^7.0.0",
     "node-fetch": "^2.6.1",
     "puppeteer": "^5.5.0",
+    "silverdiamond": "^1.4.0",
     "typescript": "^4.1.3",
     "whois": "^2.13.3"
   },
