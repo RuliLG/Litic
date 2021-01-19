@@ -6,8 +6,8 @@ import { ArgumentParser } from 'argparse'
 const parser = new ArgumentParser({ description: 'Perform technical SEO analysis to your website.' })
 
 parser.add_argument('-u', '--url', { help: 'URL to run the tests against', required: true })
-parser.add_argument('-k', '--keyword', { help: 'Keyword to run content check against' })
-parser.add_argument('-o', '--output', { help: 'Output path for a CSV file' })
+parser.add_argument('-k', '--keyword', { help: 'Keyword to run content checks against' })
+parser.add_argument('-o', '--output', { help: 'Output path for a CSV file with the results' })
 
 const args = parser.parse_args()
 
