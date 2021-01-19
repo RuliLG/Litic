@@ -13,6 +13,7 @@ import { HasMetaViewportTest } from '../tests/has-meta-viewport'
 import { WhoisTest } from '../tests/whois'
 import { VitalsLcpTest } from '../tests/vitals-lcp'
 import { VitalsClsTest } from '../tests/vitals-cls'
+import { LongCacheTtlTest } from '../tests/long-cache-ttl'
 import { LighthouseService } from '../services/lighthouse.service'
 import { HttpsRedirectionTest } from '../tests/https-redirection'
 import { TimeToInteractiveTest } from '../tests/time-to-interactive'
@@ -24,7 +25,7 @@ import { JsMinificationTest } from '../tests/js-minification'
 import { HtmlHasLangTest } from '../tests/html-has-lang'
 import { BertTest } from '../tests/bert'
 import { HeadingStructureTest } from '../tests/heading-structure'
-import { PreloadFontsTest } from '../tests/preload-fonts'
+import { ColorContrastTest } from '../tests/color-contrast'
 import { HreflangTest } from '../tests/hreflang'
 import { JumpToMainContentTest } from '../tests/jump-to-main-content'
 import { AppleTouchIconTest } from '../tests/apple-touch-icon'
@@ -93,7 +94,7 @@ export class Litic {
                     TimeToInteractiveTest,
                     CssMinificationTest,
                     JsMinificationTest,
-                    PreloadFontsTest
+                    LongCacheTtlTest,
                 ]
             },
             {
@@ -106,7 +107,8 @@ export class Litic {
                 name: 'Accessibility',
                 tests: [
                     JumpToMainContentTest,
-                    MatchingHtmlLanguageTest
+                    MatchingHtmlLanguageTest,
+                    ColorContrastTest
                 ]
             },
             {
