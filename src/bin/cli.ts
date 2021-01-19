@@ -1,6 +1,7 @@
-import { Litic } from './classes/litic'
+#!/usr/bin/env node
+
+import { Litic } from '../classes/litic'
 import { ArgumentParser } from 'argparse'
-import * as fs from 'fs'
 
 const parser = new ArgumentParser({ description: 'Perform technical SEO analysis to your website.' })
 

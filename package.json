@@ -3,6 +3,7 @@
   "version": "0.1.8",
   "description": "Perform technical SEO analysis to your website.",
   "main": "lib/index.js",
+  "preferGlobal": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "tsc": "tsc",
@@ -53,5 +54,8 @@
   },
   "files": [
     "lib/**/*"
-  ]
+  ],
+  "bin": {
+    "litic": "./lib/bin/cli.js"
+  }
 }
