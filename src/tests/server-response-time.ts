@@ -21,7 +21,7 @@ export class ServerResponseTimeTest extends Test {
         const lighthouse = LighthouseService.get(this.browser!.getUrl())
         const report = (lighthouse.getReport() as any)['server-response-time']
         this.isValid = report.numericValue <= 150
-        this.comment = `Server Response Time: ${parseInt(report.numericValue)}ms`
+        this.comment = `Server Response Time: ${parseInt(report.numericValue, 10)}ms`
         return this.getResult()
     }
 }
