@@ -51,15 +51,12 @@ import { FontSizeTest } from '../tests/font-size'
 import * as CSV from 'csv-writer';
 
 export class Litic {
-    private url: string
     private browser: HeadlessBrowser
     private namespace: object
     private tests: TestSuite[] = []
     private hasError: boolean = false
-    private error?: any = undefined
 
     constructor(url: string, namespace: object) {
-        this.url = url
         this.browser = new HeadlessBrowser(url)
         this.namespace = namespace
         this.setupSuites()
@@ -69,9 +66,11 @@ export class Litic {
         try {
             LighthouseService.shared = undefined
             await this.browser.open()
+
             const lighthouse = LighthouseService.get(this.browser.getUrl())
             lighthouse.reset()
             await lighthouse.run()
+
             for (const suite of this.tests) {
                 await suite.test()
             }
@@ -189,7 +188,7 @@ export class Litic {
                     HtmlHasLangTest,
                     AppleTouchIconTest,
                     JavascriptLinksTest,
-                    EmptyAnchorLinksTest,
+                    EmptyAnchorLinksTest
                 ]
             },
             {
@@ -221,7 +220,7 @@ export class Litic {
                     HttpsRedirectionTest,
                     RelNoopenerTest,
                     ContentSniffingTest,
-                    ClickjackingTest,
+                    ClickjackingTest
                 ]
             },
             {
