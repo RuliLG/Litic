@@ -12,6 +12,7 @@ import { HasMetaCharsetTest } from '../tests/has-meta-charset'
 import { HasMetaViewportTest } from '../tests/has-meta-viewport'
 import { WhoisTest } from '../tests/whois'
 import { VitalsLcpTest } from '../tests/vitals-lcp'
+import { VitalsClsTest } from '../tests/vitals-cls'
 import { LighthouseService } from '../services/lighthouse.service'
 import { HttpsRedirectionTest } from '../tests/https-redirection'
 import { TimeToInteractiveTest } from '../tests/time-to-interactive'
@@ -82,6 +83,7 @@ export class Litic {
                     Http2Test,
                     ServerResponseTimeTest,
                     VitalsLcpTest,
+                    VitalsClsTest,
                     FcpTest,
                     TimeToInteractiveTest,
                     CssMinificationTest,
