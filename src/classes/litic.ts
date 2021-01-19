@@ -31,6 +31,7 @@ import { HasMetadescriptionTest } from '../tests/has-metadescription'
 import { ServerResponseTimeTest } from '../tests/server-response-time'
 import { ContentWidthTest } from '../tests/content-width'
 import { MatchingHtmlLanguageTest } from '../tests/matching-html-language'
+import { TextReadabilityTest } from '../tests/text-readability'
 
 export class Litic {
     private url: string
@@ -128,9 +129,10 @@ export class Litic {
             {
                 name: 'Content',
                 tests: [
-                    BertTest,
                     HeadingStructureTest,
-                    ContentWidthTest
+                    ContentWidthTest,
+                    TextReadabilityTest,
+                    BertTest,
                 ]
             },
             {
