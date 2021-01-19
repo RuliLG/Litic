@@ -70,7 +70,7 @@ export class Litic {
         }
     }
 
-    getResults (): (Result[] | object) {
+    getResults (): Result[] {
         let results: Result[] = []
         for (const suite of this.tests) {
             results = [...results, ...suite.getResults()]
@@ -81,6 +81,21 @@ export class Litic {
 
     didFail (): boolean {
         return this.hasError
+    }
+
+    log () {
+        const results = this.getResults().map((result: Result) => {
+            return {
+                Category: result.category,
+                Name: result.name,
+                Result: result.passed === true ? '✅' : (result.passed === false ? '❌' : '-'),
+                Type: result.type,
+                Importance: result.importance,
+                Comment: result.comment
+            }
+        }) as any[]
+        // eslint-disable-next-line
+        console.table(results)
     }
 
     private setupSuites () {

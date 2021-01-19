@@ -16,7 +16,6 @@ litic.test()
             // eslint-disable-next-line
             console.error('There was a problem running your tests')
         } else {
-            // eslint-disable-next-line
-            console.log(litic.getResults())
+            litic.log()
         }
     })
