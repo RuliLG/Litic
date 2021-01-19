@@ -44,14 +44,14 @@ Accessibility | Appropiate size for tap targets
 Accessibility | Font size is greater than 12px
 Best Practices | HTML is valid
 Best Practices | Console errors
-Best Practices | <!DOCTYPE html>
-Best Practices | <html> has [lang] attribute
+Best Practices | &lt;!DOCTYPE html&gt;
+Best Practices | &lt;html&gt; has [lang] attribute
 Best Practices | Apple Touch Icon
 Best Practices | Javascript Links
 Best Practices | Empty Anchor Links
-Meta-tags | <meta charset="utf-8"> is used
-Meta-tags | <meta name="viewport"> is correctly used
-Meta-tags | <title> tag is present
+Meta-tags | &lt;meta charset="utf-8"&gt; is used
+Meta-tags | &lt;meta name="viewport"&gt; is correctly used
+Meta-tags | &lt;title&gt; tag is present
 Meta-tags | meta[name="description"]
 Meta-tags | Canonical URL is defined
 Meta-tags | Document has a valid hreflang
