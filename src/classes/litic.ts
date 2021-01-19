@@ -37,6 +37,8 @@ import { TextReadabilityTest } from '../tests/text-readability'
 import { TextRankKeywordsTest } from '../tests/text-rank-keywords'
 import { RelNoopenerTest } from '../tests/rel-noopener'
 import { TextCompressionTest } from '../tests/text-compression'
+import { ContentSniffingTest } from '../tests/content-sniffing'
+import { ClickjackingTest } from '../tests/clickjacking'
 
 export class Litic {
     private url: string
@@ -165,9 +167,9 @@ export class Litic {
                     PlainTextEmailsTest,
                     HttpsTest,
                     HttpsRedirectionTest,
-                    RelNoopenerTest
                     RelNoopenerTest,
                     ContentSniffingTest,
+                    ClickjackingTest,
                 ]
             },
             {
