@@ -77,7 +77,10 @@ export class Litic {
 
             await this.browser.close()
         } catch (e) {
+            // es-lint-disable-next-line
+            console.log(e)
             await this.browser.close()
+            process.exit(1)
         }
     }
 
