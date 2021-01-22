@@ -1,1 +1,1 @@
-declare module 'silverdiamond';
+declare module 'silverdiamond'

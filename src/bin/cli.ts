@@ -14,14 +14,9 @@ const args = parser.parse_args()
 const litic = new Litic(args.url, args)
 litic.test()
     .then(async () => {
-        if (litic.didFail()) {
-            // eslint-disable-next-line
-            console.error('There was a problem running your tests')
-        } else {
-            litic.log()
+        litic.log()
 
-            if (args.output) {
-                litic.saveTo(args.output)
-            }
+        if (args.output) {
+            litic.saveTo(args.output)
         }
     })

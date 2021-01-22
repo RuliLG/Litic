@@ -1,1 +1,1 @@
-declare module 'whois';
+declare module 'whois'

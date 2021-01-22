@@ -1,8 +1,8 @@
-import { Test } from "../classes/test";
-import { Result } from "../types/result";
-import { ResultType } from "../enums/result-type";
-import { Importance } from "../enums/importance";
-import * as SD from 'silverdiamond';
+import { Test } from '../classes/test'
+import { Result } from '../types/result'
+import { ResultType } from '../enums/result-type'
+import { Importance } from '../enums/importance'
+import * as SD from 'silverdiamond'
 
 export class MatchingHtmlLanguageTest extends Test {
     constructor () {

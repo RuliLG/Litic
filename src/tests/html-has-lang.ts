@@ -1,8 +1,8 @@
-import { Test } from "../classes/test";
-import { Result } from "../types/result";
-import { ResultType } from "../enums/result-type";
-import { Importance } from "../enums/importance";
-import { LighthouseService } from "../services/lighthouse.service";
+import { Test } from '../classes/test'
+import { Result } from '../types/result'
+import { ResultType } from '../enums/result-type'
+import { Importance } from '../enums/importance'
+import { LighthouseService } from '../services/lighthouse.service'
 
 export class HtmlHasLangTest extends Test {
     constructor () {

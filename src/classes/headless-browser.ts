@@ -65,6 +65,10 @@ export class HeadlessBrowser {
         return url.hostname
     }
 
+    async evaluate (script: any): Promise<any> {
+        return await this.page!.evaluate(script)
+    }
+
     async close (): Promise<void> {
         if (this.browser) {
             await this.browser.close()

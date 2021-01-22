@@ -1,5 +1,5 @@
-import { Importance } from "../enums/importance";
-import { ResultType } from "../enums/result-type";
+import { Importance } from '../enums/importance'
+import { ResultType } from '../enums/result-type'
 
 export interface Result {
     name: string,

@@ -1,1 +1,1 @@
-declare module 'html-validator';
+declare module 'html-validator'

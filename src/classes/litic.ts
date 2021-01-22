@@ -48,13 +48,12 @@ import { EmptyAnchorLinksTest } from '../tests/empty-anchor-links'
 import { OffscreenImagesTest } from '../tests/offscreen-images'
 import { TapTargetsTest } from '../tests/tap-targets'
 import { FontSizeTest } from '../tests/font-size'
-import * as CSV from 'csv-writer';
+import * as CSV from 'csv-writer'
 
 export class Litic {
     private browser: HeadlessBrowser
     private namespace: object
     private tests: TestSuite[] = []
-    private hasError: boolean = false
 
     constructor(url: string, namespace: object) {
         this.browser = new HeadlessBrowser(url)
@@ -91,10 +90,6 @@ export class Litic {
         }
 
         return results
-    }
-
-    didFail (): boolean {
-        return this.hasError
     }
 
     log () {

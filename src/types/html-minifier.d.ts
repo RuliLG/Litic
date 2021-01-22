@@ -1,1 +1,1 @@
-declare module 'html-minifier';
+declare module 'html-minifier'

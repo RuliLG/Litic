@@ -1,8 +1,8 @@
-import { Test } from "../classes/test";
-import { Result } from "../types/result";
-import { ResultType } from "../enums/result-type";
-import { Importance } from "../enums/importance";
-import { LighthouseService } from "../services/lighthouse.service";
+import { Test } from '../classes/test'
+import { Result } from '../types/result'
+import { ResultType } from '../enums/result-type'
+import { Importance } from '../enums/importance'
+import { LighthouseService } from '../services/lighthouse.service'
 
 export class DomSizeTest extends Test {
     constructor () {
@@ -20,7 +20,7 @@ export class DomSizeTest extends Test {
     async test (): Promise<Result> {
         const lighthouse = LighthouseService.get(this.browser!.getUrl())
         const report = (lighthouse.getReport() as any)['dom-size']
-        this.isValid = report.score === 1
+        this.isValid = report.numericValue <= 1500
         return this.getResult()
     }
 }

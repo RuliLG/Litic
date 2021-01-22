@@ -1,8 +1,8 @@
-import { Test } from "../classes/test";
-import { Result } from "../types/result";
-import { ResultType } from "../enums/result-type";
-import { Importance } from "../enums/importance";
-import { WhoisService } from "../services/whois.service";
+import { Test } from '../classes/test'
+import { Result } from '../types/result'
+import { ResultType } from '../enums/result-type'
+import { Importance } from '../enums/importance'
+import { WhoisService } from '../services/whois.service'
 import * as dayjs from 'dayjs'
 
 export class WhoisTest extends Test {
