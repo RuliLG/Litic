@@ -1,5 +1,6 @@
 import * as lighthouse from 'lighthouse'
 import * as chromeLauncher from 'chrome-launcher'
+import fetch from 'node-fetch'
 
 export class LighthouseService {
     static shared?: LighthouseService = undefined
@@ -21,6 +22,25 @@ export class LighthouseService {
     async run (): Promise<void> {
         if (this.report) {
             return
+        }
+
+        // If PageSpeed is available, we use it to avoid resource consumption
+        if (process.env.PAGESPEED_TOKEN) {
+            const token = process.env.PAGESPEED_TOKEN
+            try {
+                const pagespeedReport = await fetch(`https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${encodeURIComponent(this.url)}&key=${token}&strategy=MOBILE&category=ACCESSIBILITY&category=BEST_PRACTICES&category=PERFORMANCE&category=SEO&category=PWA`)
+                    .then(response => response.json())
+
+                if (pagespeedReport.hasOwnProperty('lighthouseResult')) {
+                    this.report = pagespeedReport.lighthouseResult.audits
+                } else {
+                    throw new Error('Invalid response from PageSpeed. More info at https://developers.google.com/speed/docs/insights/v5/get-started')
+                }
+                return
+            } catch (e) {
+                console.log(e)
+                throw new Error('Invalid PageSpeed API Key. More info at https://developers.google.com/speed/docs/insights/v5/get-started')
+            }
         }
 
         const chrome = await chromeLauncher.launch({
