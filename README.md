@@ -84,6 +84,14 @@ Short name | Long name | Description | Required
 -k|--keyword|Keyword to run content checks against|No
 -o|--output|Output path for a CSV file with the results|No
 
+## Running remote
+If running under a low-resource environment, you can run the lighthouse analysis using [Google PageSpeed Insights API](https://developers.google.com/speed/docs/insights/v5/get-started).
+To do this, you just need to set the `PAGESPEED_TOKEN` environment variable to your API token, and Litic will use it to perform the remote analysis.
+
+```bash
+PAGESPEED_TOKEN={YOUR_TOKEN} litic -u "https://example.com"
+```
+
 ## Smart tests
 There are a few tests that rely on [Silver Diamond](https://silverdiamond.io) to execute. To use them, please register and set an environment variable named `SD_KEY` to your api key.
 
